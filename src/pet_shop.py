@@ -33,29 +33,26 @@ def  increase_pets_sold(pet_shop, add_number ):
 
 # count (LEN) the number of pets for a stock count
 def get_stock_count(pet_shop):
-
+    
     return len(pet_shop["pets"])
     
 
 # task 8 return the number of a specific breed
 
-def get_pets_by_breed(pet_shop, breed):
-    
-    if breed in pet_shop == breed:
-        return len(petshop["pets"][0]["breed"] and petshop["pets"][1]["breed"])
+# task 10
 
+def find_pet_by_name(pet_shop, pet_name):
 
-   
-    
-#     breed_list = []
-    
-#     for breeds in pet_shop:
-#         if breeds == breed:
-#             breed_list.append(breed)
+    pet_found = []
+
+    for pet in pet_shop:
+        if pet == pet_name:
+            pet_found.append(pet)
+       
         
-#         return "found"
+        
 
-# print(get_pets_by_breed(pet_shop, "British Shorthair"))
+
 
 
 
