@@ -37,17 +37,76 @@ def get_stock_count(pet_shop):
     return len(pet_shop["pets"])
     
 
-# task 8 return the number of a specific breed
+# task 8 return the number of a specific breed.
+# task 9 return none if breed doesn't exits
 
-# task 10
+def get_pets_by_breed(pet_shop, breed):
+
+    dog_breed= []
+
+    for dogs in pet_shop["pets"]:
+        if dogs["breed"] == breed:
+            dog_breed.append(breed)
+    
+    return dog_breed
+
+
+
+ # task 10 return pet by name.
 
 def find_pet_by_name(pet_shop, pet_name):
+    
+    for pet in pet_shop["pets"]:
+         if pet["name"] == pet_name:
+             return pet
 
-    pet_found = []
+# task 11 remove pet by name.
 
-    for pet in pet_shop:
-        if pet == pet_name:
-            pet_found.append(pet)
+def remove_pet_by_name(pet_shop, pet_name): 
+    
+    for pet in pet_shop["pets"]:
+         if pet["name"] == pet_name:
+             pet_shop["pets"].remove(pet)
+
+#task 12 add pet by name
+
+def add_pet_to_stock(pet_shop, pet_to_add):
+    
+    pet_shop["pets"].append(pet_to_add)
+
+
+#task 13 get customer cash
+
+
+def get_customer_cash(customer_pets):
+
+    return customer_pets["cash"]
+
+# task 14 remove customer cash:
+
+def remove_customer_cash(customers, cash_remove):
+
+    customers["cash"] -= cash_remove
+
+    return customers["cash"]
+
+# task get count of pets for a customer
+
+def get_customer_pet_count (customer_pets):
+
+    return len(customer_pets["pets"])
+
+#task 16 add a pet to a customer.
+
+def add_pet_to_customer(customer_pets, add_pet):
+
+    customer_pets["pets"].append(add_pet)
+
+
+    
+
+
+
        
         
         
